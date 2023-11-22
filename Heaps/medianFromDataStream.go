@@ -36,26 +36,26 @@ func Constructor() MedianFinder {
 	}
 }
 
-func (this *MedianFinder) AddNum(num int) {
+func (mf *MedianFinder) AddNum(num int) {
 	// if stream count is even, after adding the new element,
 	// the extra element should flow to minHeap (2nd half).
 	// hence we put new num in maxHeap(1st half) and remove the max among that half
 	// and put it in 2nd half i.e minHeap
-	if (this.minHeap.Len()+this.maxHeap.Len())%2 == 0 {
-		heap.Push(this.maxHeap, num)
-		heap.Push(this.minHeap, heap.Pop(this.maxHeap))
+	if (mf.minHeap.Len()+mf.maxHeap.Len())%2 == 0 {
+		heap.Push(mf.maxHeap, num)
+		heap.Push(mf.minHeap, heap.Pop(mf.maxHeap))
 	} else {
 		// if stream count is odd, after adding the new element, the extra element should
 		// flow to first half (maxHeap). Hence we put new num in minHeap(2nd half) and pop 
 		// the min of Second Half(minHeap) and put it in firstHalf (maxHeap)
-		heap.Push(this.minHeap, num)
-		heap.Push(this.maxHeap, heap.Pop(this.minHeap))
+		heap.Push(mf.minHeap, num)
+		heap.Push(mf.maxHeap, heap.Pop(mf.minHeap))
 	}
 }
 
-func (this *MedianFinder) FindMedian() float64 {
-	if (this.maxHeap.Len()+this.minHeap.Len())%2 == 0 {
-		return float64(this.minHeap.Values[0]+this.maxHeap.Values[0])/2.0
+func (mf *MedianFinder) FindMedian() float64 {
+	if (mf.maxHeap.Len()+mf.minHeap.Len())%2 == 0 {
+		return float64(mf.minHeap.Values[0]+mf.maxHeap.Values[0])/2.0
 	}
-	return float64(this.minHeap.Values[0])
+	return float64(mf.minHeap.Values[0])
 }
