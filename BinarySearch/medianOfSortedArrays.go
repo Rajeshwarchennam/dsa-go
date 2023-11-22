@@ -12,6 +12,7 @@ func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		nums1, nums2 = nums2, nums1
 	}
 	m, n := len(nums1), len(nums2)
+	// low, high, mid1, mid2 are number of elements. Not indexes
 	low, high := 0, m
 	for low <= high {
 		mid1 := (low + high) >> 1

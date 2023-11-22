@@ -1,5 +1,9 @@
 package BinarySearch
 
+// https://leetcode.com/problems/find-peak-element/description/
+
+// peak element means element that is strictly greater than it's neighbors
+
 func FindPeakElement(nums []int) int {
     n := len(nums)
 	if n==0 {

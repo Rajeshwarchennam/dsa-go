@@ -15,8 +15,11 @@ func KthElementOfSortedArrays(nums1, nums2 []int, k int) int {
 	if k > m+n {
 		return 0.0
 	}
+	// low 0 means we can 0 elements from nums1 
+	// high m means we can pick all (m elements) from nums1
 	low, high := 0, m
 	for low <= high {
+		// mid1, mid2 states number of elements. not the index until which
 		mid1 := (low + high) >> 1
 		mid2 := k - mid1
 		l1, l2, r1, r2 := math.MinInt64, math.MinInt64, math.MaxInt64, math.MaxInt64
