@@ -1,5 +1,10 @@
 package KadanesAlgo
 
+// link - https://leetcode.com/problems/maximum-subarray/description/
+
+// TC - O(N)
+// SC - O(N)
+
 import "math"
 
 func MaxSubArray(nums []int) int {
