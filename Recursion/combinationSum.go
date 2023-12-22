@@ -4,6 +4,10 @@ package Recursion
 // link - https://leetcode.com/problems/combination-sum/description/
 // Time complexity - O(2^target*k) where k is average length of each sumSet
 
+
+// Problem - given distint nums and target, return a list of all unique combinations of nums where sum is target
+// we can choose same num any number of times
+
 func CombinationSum(nums []int, target int) [][]int {
 	size := len(nums)
 	res := make([][]int, 0, size)

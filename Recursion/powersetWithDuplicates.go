@@ -4,6 +4,8 @@ import "sort"
 
 // link - https://leetcode.com/problems/subsets-ii/
 
+
+// given an integer array nums (may have duplicates), return powerset
 func SubsetsWithDuplicates(nums []int, size int) [][]int {
 	res := make([][]int, 0, size)
     transitionlist := make([]int, 0)

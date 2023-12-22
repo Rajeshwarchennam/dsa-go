@@ -4,6 +4,8 @@ import "sort"
 
 // link - https://practice.geeksforgeeks.org/problems/subset-sums2234/1
 
+
+// given a list of nums, return sums of all subets in it
 func SubsetSums(nums []int, size int) []int {
 	res := make([]int, 0, size)
 	var recFun func(currIndex int, currSum int)

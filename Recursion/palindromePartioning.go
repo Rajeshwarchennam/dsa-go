@@ -2,6 +2,8 @@ package Recursion
 
 // link - https://leetcode.com/problems/palindrome-partitioning/description/
 
+// given a string s, return all possible palindrome partitionings
+
 func PalindromePartioning(s string) [][]string {
 	size := len(s)
 	res := make([][]string, 0, 10)

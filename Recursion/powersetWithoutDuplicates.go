@@ -1,6 +1,8 @@
 package Recursion
 // link - https://leetcode.com/problems/subsets/
 
+// Given an integer array of unique elements, return all possible substets(power set)
+
 func SubsetsWithoutDuplicates(nums []int, size int) [][]int {
 	result := make([][]int, 0, size)
 	transitionList := make([]int, 0)
