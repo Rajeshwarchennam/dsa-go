@@ -2,6 +2,8 @@ package FlattenBinaryTree
 
 // link - https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/
 
+// flatten as preorder traversal
+
 // TC - O(N)
 // SC - O(N)
 

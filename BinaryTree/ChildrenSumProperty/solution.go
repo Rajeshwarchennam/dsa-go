@@ -24,11 +24,9 @@ func ChangeTree(root *TreeNode) {
 		childSum += root.Right.Val
 	}
 
-	// if both children sum is greater than or equal to node value, we can update parent value to sum of children
 
-	if childSum >= root.Val {
-		root.Val = childSum
-	} else {
+	if childSum < root.Val {
+	
 		// if childSUm is less than parent Val, make children value equal to parent value
 		// we are increasing the children value here so we make sure we never fall short
 		// hence while coming back up we can just add children value and replace parent
